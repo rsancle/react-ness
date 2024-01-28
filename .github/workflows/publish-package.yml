@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-gpr:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
