@@ -1,28 +1,26 @@
 import { Canvas, Meta } from "@storybook/blocks";
-import * as Button from "./Button.stories.tsx";
+import * as Avatar from "./Avatar.stories.tsx";
 
-<Meta of={Button} title="Button" />
+<Meta of={Avatar} title="Avatar" />
 
-# Button
+# Avatar
 
-Button component with different props.
+Avatar component with different props.
 
 #### Example
 
-<Canvas of={Button.Primary} />
+<Canvas of={Avatar.Rounded} />
 
 ## Usage
 
 ```ts
-import {Button} from "sld-ui";
+import {Avatar} from "rsancle/react-ness";
 
 const Example = () => {
   return (
-      <Button
+      <Avatar
         size={"small"}
-        text={"Button"}
-        onClick={()=> console.log("Clicked")}
-        primary
+        src={"my-image.png"}
       />
   );
 };
