@@ -20,6 +20,6 @@ export const Rounded: Story = {
   args: {
     src: faker.image.avatar(),
     size: "default",
-    rounded: true,
+    isRounded: true,
   },
 };

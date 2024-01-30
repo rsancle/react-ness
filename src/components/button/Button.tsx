@@ -1,6 +1,7 @@
 // components/button/button.tsx
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
+import Text from "../text/Text";
 
 export type ButtonProps = {
   text?: string;
@@ -31,7 +32,6 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button: React.FC<ButtonProps> = ({
   size,
-  primary,
   disabled,
   text,
   onClick,
@@ -41,12 +41,11 @@ const Button: React.FC<ButtonProps> = ({
     <StyledButton
       type="button"
       onClick={onClick}
-      primary={primary}
       disabled={disabled}
       size={size}
       {...props}
     >
-      {text}
+      <Text>{text}</Text>
     </StyledButton>
   );
 };

@@ -5,7 +5,7 @@ import { faker } from "@faker-js/faker";
 const Example: FC<AvatarProps> = ({
   size = "default",
   src = faker.image.avatar(),
-  rounded,
+  isRounded = false,
 }) => {
   return (
     <div
@@ -16,7 +16,7 @@ const Example: FC<AvatarProps> = ({
         height: "100%",
       }}
     >
-      <Avatar size={size} src={src} rounded={rounded} />
+      <Avatar size={size} src={src} isRounded={isRounded} />
     </div>
   );
 };
